@@ -32,13 +32,9 @@ section {
     padding: 5rem 0;
 }
 
-body {
-    background: cornflowerblue;
-}
-
 .container {
     width: 100%;
-    max-width: 98rem;
+    max-width: 130rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -97,6 +93,7 @@ nav {
     top: 1rem;
     left: 1.5rem;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 .nav-item{
@@ -108,3 +105,346 @@ nav {
      text-transform: uppercase;
      color: rgba(0,0,0,0.7);
  }
+
+ /* hero */
+
+ .hero {
+     width: 100%;
+     height: 80vh;
+     background: linear-gradient(135deg, rgba(49,24,131,.9) 0%, 
+     rgba(71,56,149, .8) 100%), url('images/header-bg.jpg')
+     center no-repeat;
+     background-size: cover;
+     position: relative;
+ }
+
+ .hero::before {
+     content: '';
+     position: absolute;
+     left: -3px;
+     bottom: 0;
+     height: 4.7rem;
+     background: url('images/wave-small.png') center no-repeat;
+     background-size: cover;
+     width: 100%;
+     z-index: 100;
+ }
+
+ .main-massage {
+     width: 100%;
+     max-width: 50rem;
+     color: #fafafa;
+     text-transform: uppercase;
+     transform: translateY(20rem);
+ }
+
+ .main-massage h3 {
+     font-size: 1.6rem;
+ }
+
+ .main-massage h1 {
+     font-family: 'aladrich', sans-serif;
+     font-size: 4rem;
+     margin: 1rem 0;
+ }
+ .main-massage p{
+  text-transform: lowercase;
+ }
+
+ .btn {
+     background: #eb548c;
+     border-radius: 2rem;
+     color: #fff;
+     display: inline-block;
+     margin-top: 2rem;
+     padding: 1rem 2.5rem;
+     text-transform: uppercase;
+     transition: background-color 650ms;
+     cursor: pointer;
+     position: relative;
+ }
+
+ .btn:hover {
+     background-color: #cc567b;
+ }
+
+ /* experience section */
+
+.experience-outdoors {
+     padding: 20 0 0 0;
+ }
+
+.tittle-heading{
+     text-align: center;
+     text-transform: uppercase;
+     margin-bottom: 10rem;
+     color: rgba(0,0,0,.7);
+ }
+
+.tittle-heading h3 {
+     font-size: 1.4rem;
+ }
+
+.tittle-heading h1 {
+     font-family: 'aldrich', sans-serif;
+     font-size: 2rem;
+     margin: .5rem 0 1rem;
+ }
+
+.tittle-heading p {
+     text-transform: lowercase;
+ }
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+ }
+
+.activities-grid-item {
+     height: 40rem;
+     padding: 5rem;
+     color: #fafafa;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     cursor: pointer;
+     z-index: 1;
+ }
+
+ .activities-grid-item::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: linear-gradient(135deg, rgba(49,24,131,.9) 0%, 
+     rgba(71,56,149, .8) 100%);
+     z-index: -1;
+ }
+
+ .star-gazing {
+     background: url('images/stars.jpg') center no-repeat;
+ }
+
+ .hiking {
+    background: url('images/hiking.jpg') center no-repeat;
+ }
+
+ .camping {
+    background: url('images/camping.jpg') center no-repeat;
+ }
+
+ .activities-grid-item i{
+   font-size: 4rem;
+   color: #cb648c;
+ }
+
+ .activities-grid-item h1 {
+     font-family: 'aldrich', sans-serif;
+     font-size: 1.7rem;
+     text-transform: uppercase;
+     margin: 2rem 0;
+ }
+
+ /* Testimonials */
+
+ .testimonials {
+     width: 100%;
+     height: 80vh;
+     background: linear-gradient(135deg, rgba(49,24,131,.9) 0%, 
+     rgba(71,56,149, .8) 100%), url('images/testimonials-bg.jpg')
+     center no-repeat fixed;
+     background-size: cover;
+     position: relative;
+ }
+
+ .testimonials::before {
+     content: '';
+     position: absolute;
+     top: -3px;
+     left: 0;
+     width: 100%;
+     height: 4.7rem;
+     background: url('images/wave-small-reversed.png') center no-repeat;
+     background-size: cover;
+ }
+
+ .testimonial {
+     width: 100%;
+     color: #fafafa;
+     position: absolute;
+     top: 55%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+ }
+
+ .testimonial-text-box {
+     padding: 0 1.5rem;
+     margin-bottom: 2rem;
+     position: relative;
+ }
+
+ .testimonial-text-box i {
+     position: absolute;
+     top: -8rem;
+     left: 50%;
+     transform: translate(-50%);
+     font-size: 8rem;
+     color: #cb648c;
+     opacity: .5;
+     z-index: -1;
+ }
+
+ .testimonial-customer img {
+     width: 10rem;
+     height: 10rem;
+     border-radius: 100%;
+     border: 3px solid #eb548c;
+ }
+
+ /* Adventure */
+
+ .adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+ }
+
+ .adventure-grid p {
+     color: rgba(0,0,0,.7);
+ }
+
+ /* footer */
+
+ footer {
+     padding: 2.5rem 0;
+     background: #d7d4ed;
+     text-align: center;
+     color: rgba(0,0,0,0.7);
+ }
+
+ /* REsponsive */
+
+ @media (mix-width: 350px) {
+     .main-massage {
+         transform: translate(40%);
+     }
+ }
+
+ @media (mix-width: 470px) {
+    .hero::before {
+        height: 9.4rem;
+        background: url(images/wave-medium.png);
+        background-size: cover;
+    }
+
+    .testimonial::before {
+        height: 9.4rem;
+        background: url(images/wave-medium-reversed.png);
+        background-size: cover;
+    }
+}
+
+@media (min-width: 700px) {
+    header {
+        height: 8rem;
+    }
+
+    .nav-brand {
+        width: 3.5rem;
+    }
+
+    .nav-list {
+        width: initial;
+        height: inherit;
+        background: transparent;
+        position: initial;
+        top: initial;
+        right: inherit;
+        display: flex;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-icons {
+        display: none;
+    }
+
+    .nav-item {
+        margin: 0 2.3rem;
+    }
+
+    .nav-link, .current {
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .nav-link::before,
+    .current::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -.5rem;
+        background: #eb648c;
+        width: 100%;
+        padding-top: 10px;
+        height: 3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before {
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover::before {
+        transform: scaleX(1)
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .main-massage {
+        transform: translateY(70%);
+    }
+
+    .tittle-heading h1 {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media (min-width: 950px) {
+    .hero::before {
+        height: 22.7rem;
+        background: url('images/wave-large.png');
+        background-size: cover;
+    }
+
+    .testimonial::before {
+        height: 22.7rem;
+        background: url('images/wave-large-reversed.png');
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        height: 75vh;
+    }
+}
+
+
